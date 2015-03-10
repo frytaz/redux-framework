@@ -74,6 +74,10 @@
 
                             var frame = wp.media.gallery.edit( final );
 
+                            if (!val) {
+                                wp.media.gallery.frame.setState('gallery-library');
+                            }
+
                             // When the gallery-edit state is updated, copy the attachment ids across
                             frame.state( 'gallery-edit' ).on(
                                 'update', function( selection ) {
